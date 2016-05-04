@@ -21,10 +21,11 @@ function toggleMenu(range) {
     }
 }
 document.addEventListener('mouseup', function(ev) {
-    var selection = getSelection();
+    var selection = window.getSelection();
     if (selection.rangeCount > 0) {
         var range = selection.getRangeAt(0);
         toggleMenu(range);
+        console.log(selection.toString());
         // range.deleteContents();
         // selection.removeAllRanges();
     }

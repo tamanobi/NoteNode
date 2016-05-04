@@ -1,10 +1,29 @@
 <html>
+<link rel="stylesheet" href="main.css">
 <body>
 <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-<script src="main.js"></script>
+<p>bbbbbbbb<span>bbb</span>bbbbbbb</p>
+<p><span data-link-id='aaa'>アニメ</span></p>
+<p><span data-link-id='aaa'>アニメ</span></p>
 <ul id="menu">
   <li>消す</li>
   <li>増やす</li>
 </ul>
+<script src="mithril.min.js"></script>
+<script src="main.js"></script>
+<script>
+var todo = {};
+
+//例をシンプルにするために、このコンポーネントをモデルクラスの名前空間として利用する
+
+//Todoクラスはプロパティを2つ持つ
+todo.Todo = function(data) {
+  this.description = m.prop(data.description);
+  this.done = m.prop(false);
+};
+
+//TodoListクラスはTodoのリスト
+todo.TodoList = Array;
+</script>
 </body>
 </html>
